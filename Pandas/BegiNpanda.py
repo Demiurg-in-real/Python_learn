@@ -9,7 +9,7 @@ def main(asd):
 
 def geti():
     a=createtable()
-    return a.loc[4:9,['dates','e','r']]#a.describe()#a.to_numpy() - smtimes helpful#a.columns#a.index#a.tail(2)#a.head()#a.dtypes
+    return a#.loc[4:9,['dates','e','r']]#a.describe()#a.to_numpy() - smtimes helpful#a.columns#a.index#a.tail(2)#a.head()#a.dtypes
 def mktable():
     Ok = 21
     #df=pd.Series([1,4,5,23,np.nan,Ok]) it is just for column-make
@@ -21,8 +21,8 @@ def mktable():
     #print(dataS)
 
 def createtable():
-    dates=pd.date_range('19990221',periods=11)
-    df1=pd.DataFrame({ 'Numders' : [os.urandom(1) for i in range(11)], 'dates':pd.Timestamp('19720101'),'c':pd.Series(1,index=(range(11)),dtype='float32'), 'd':np.array([3]*11,dtype='int32'),'e': pd.Categorical(['I','want','sex','.','Rough','anal','sex','with','milf','!','!']),'r':dates})
+    dates=pd.date_range(start='1999',periods=11,freq="Y")
+    df1=pd.DataFrame({ 'Numders' : [os.urandom(1) for i in range(11)], 'dates':pd.Timestamp('19720101'),'c':pd.Series(1,index=(range(11)),dtype='float32'), 'd':np.array([3]*11,dtype='int32'),'e': pd.Categorical(['I','want','sex','.','Rough','anal','sex','with','milf','!','!']),'r':dates}, index=dates)
     return df1 #arrays(columns) must have the same length and one cell can't contain more than one element(don't use arrays)
 if __name__=='__main__':
     main(str(input()))

@@ -1,3 +1,3 @@
-from pandas import read_csv
-df=read_csv("test.txt")
-print(df.describe)
+import pandas as ps
+df=ps.read_excel("rs.xlsx")
+print(df.T)
