@@ -22,7 +22,7 @@ def mktable():
 
 def createtable():
     dates=pd.date_range(start='1999',periods=11,freq="Y")
-    df1=pd.DataFrame({ 'Numders' : [os.urandom(1) for i in range(11)], 'dates':pd.Timestamp('19720101'),'c':pd.Series(1,index=(range(11)),dtype='float32'), 'd':np.array([3]*11,dtype='int32'),'e': pd.Categorical(['I','want','sex','.','Rough','anal','sex','with','milf','!','!']),'r':dates}, index=dates)
+    df1=pd.DataFrame({ 'Numders' : [os.urandom(1) for i in range(11)], 'dates':pd.Timestamp('19720101'),'c':pd.Series(1,index=(range(11)),dtype='float32'), 'd':np.array([3]*11,dtype='int32'),'e': pd.Categorical(['I','want','coding','.','Hard','coding','with','notebook','and','hardcore','!']),'r':dates}, index=dates)
     return df1 #arrays(columns) must have the same length and one cell can't contain more than one element(don't use arrays)
 if __name__=='__main__':
     main(str(input()))
